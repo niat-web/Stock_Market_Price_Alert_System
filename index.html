@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Price Alert System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+  <header class="header">
+  <div class="container">
+  <h1 class="text-center">Stock Market Price Alert System</h1>
+  <p class="text-center">Track and monitor stock prices with real-time alerts.</p>
+  <div class="dark-mode-toggle">
+  <i class="fas fa-moon"></i>
+  <input type="checkbox" id="dark-mode-switch">
+  <label for="dark-mode-switch"></label>
+  </div>
+  </div>
+  </header>
+ 
+
+  <main class="container">
+  <section id="stock-data" class="neumorphic-card">
+  <h2>Stock Data</h2>
+  <div class="form-group">
+  <label for="stockSymbol">Stock Symbol:</label>
+  <select class="form-control" id="stockSymbol">
+  <option>AS</option>
+  <option>AAPL</option>
+  <option>GOOG</option>
+  <option>MSFT</option>
+  <option>IBM</option>
+  </select>
+  </div>
+  <button id="refresh-data" class="btn btn-primary">Refresh Data</button>
+  <div id="stock-data-display">
+  <!-- Stock data will be displayed here -->
+  </div>
+  </section>
+ 
+
+  <section id="price-alert" class="neumorphic-card">
+  <h2>Price Alert Setup</h2>
+  <form id="alert-form">
+  <div class="form-group">
+  <label for="alertSymbol">Stock Symbol:</label>
+  <input type="text" class="form-control" id="alertSymbol" placeholder="e.g., AAPL" required>
+  <div class="invalid-feedback">Please enter a valid stock symbol.</div>
+  </div>
+  <div class="form-group">
+  <label for="alertPrice">Alert Price:</label>
+  <input type="number" class="form-control" id="alertPrice" placeholder="e.g., 150.00" required>
+  <div class="invalid-feedback">Please enter a valid alert price.</div>
+  </div>
+  <div class="form-group">
+  <label>Alert Type:</label>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="alertType" id="above" value="above" checked>
+  <label class="form-check-label" for="above">Above</label>
+  </div>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="alertType" id="below" value="below">
+  <label class="form-check-label" for="below">Below</label>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-success">Set Alert</button>
+  <button type="button" class="btn btn-secondary" id="clear-form">Clear</button>
+  </form>
+  <div id="notification" class="notification"></div>
+  </section>
+ 
+
+  <section id="dashboard" class="neumorphic-card">
+  <h2>Dashboard</h2>
+  <div class="dashboard-grid">
+  <div class="stat-card">
+  <h3>Current Price</h3>
+  <p id="current-price">$--</p>
+  </div>
+  <div class="stat-card">
+  <h3>High Today</h3>
+  <p id="high-today">$--</p>
+  </div>
+  <div class="stat-card">
+  <h3>Low Today</h3>
+  <p id="low-today">$--</p>
+  </div>
+  </div>
+  </section>
+  </main>
+ 
+
+  <footer class="footer">
+  <div class="container">
+  <p>&copy; 2024 Stock Market Alert System</p>
+  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </div>
+  </footer>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+ </body>
+ </html>
