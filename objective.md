@@ -5,7 +5,7 @@
 This project implements a web-based stock market price alert system using JavaScript, HTML, and CSS. The application allows users to set up price alerts for specific stock symbols and displays real-time stock data fetched from the Alpha Vantage API. Features include a dark mode toggle for improved user experience, form validation to ensure accurate alert settings, and dynamic display of stock information in a table format. The application leverages DOM manipulation, event listeners, asynchronous data fetching, and local storage for persistent theme preferences.
 
 ## Output
-<iframe src="https://github.com/niat-web/Stock_Market_Price_Alert_System" height="1000" width="300" title="Stock_Market_Price_Alert_System"></iframe>
+<iframe src="https://niat-web.github.io/Stock_Market_Price_Alert_System/" height="1000" width="300" title="Stock_Market_Price_Alert_System"></iframe>
 
 ## Project Requirements
 **Technologies:** JavaScript, HTML, CSS, Alpha Vantage API
