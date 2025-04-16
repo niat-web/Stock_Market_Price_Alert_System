@@ -9,13 +9,15 @@
  }
  
 
- [data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #fff;
-  --shadow-color: rgba(255, 255, 255, 0.1);
-  --inner-shadow-color: rgba(0, 0, 0, 0.7);
- }
- 
+/* Dark Mode Theme */
+[data-theme="dark"] {
+    --bg-color: #121212; /* Dark background */
+    --text-color: #fff; /* White text */
+    --primary-color: #2c3e50; /* Dark primary color */
+    --secondary-color: #82a6ca; /* Dark secondary color */
+    --shadow-color: rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
+    --inner-shadow-color: rgba(0, 0, 0, 0.7); /* Darker inner shadow */
+}
 
  body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
